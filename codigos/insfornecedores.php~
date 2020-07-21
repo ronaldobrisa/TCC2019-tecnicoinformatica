@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<!-- Link para o CSS de formulários -->
+<link rel="stylesheet" type="text/css" href="../css/forms.css?v=<?php echo filemtime('css/forms.css'); ?>>"
+
+<title></title>
+</head>
+<body> 
+<!-- envia os dados via post para o arquivo doinsfornecedores que fará a gravação --> 
+<form action="doinsfornecedores.php" method="POST" name="formulario" id="formulario">
+<fieldset id="BoxForm"><legend align="center">Cadastra um novo fornecedor</legend>
+ <ul> 
+ <br><br>
+           
+	<li>
+		<label for="nome">Nome:</label>
+		<input name="nome" size="25" id="nome" placeholder="Insira o nome" type="text" class="campos02"  value=""/>
+	</li>
+
+	<li>
+		<label for="descricao">Descricao:</label>
+		<input name="descricao" size="25" id="descricao" placeholder="Descreva" type="text" class="campos02" value=""/>
+	</li>
+	
+	<li>
+		<label for="n_local">Nº Local:</label>
+		<input name="n_local" size="25" id="n_local" placeholder="Numero do local" type="text" class="campos02" value=""/>
+	</li>
+	
+	<li>
+		<label for="cep">Cep:</label>
+		<input name="cep" size="25" id="cep" placeholder="CEP sem separador" type="text" class="campos02" value=""/>
+	</li>
+	
+	<br><br>
+
+	<li>
+	   <input type="submit" id="enviar" value="Enviar" onclick="this.value='Aguarde...'" />
+	</li>
+	
+ </ul>
+</fieldset>
+</form>
+</body>
+<footer>
+   <?php
+   //# faz a chamada do include do rodapé 
+  // include("footer_copyright.inc.php");?> 
+</footer>
+</html>

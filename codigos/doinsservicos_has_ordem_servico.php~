@@ -1,0 +1,14 @@
+<?php 
+# Inclui o arquivo de conexão
+include ('conexao.php');  
+# comando SQL do banco 
+$sql = "INSERT INTO servicos_has_ordem_servico
+      VALUES (0,'$_POST[id_ordem_servico]',
+      '$_POST[qtde_horas_tecnicas]',
+      '$_POST[custo_horas_tecnica]',"; 
+# Executa a consulta da variável
+$query = mysqli_query($conexao,$sql);
+if ($query) 
+include ('closereload.inc.php');
+else echo "Erro ao inserir o registro. Provavelmente o registro já está cadastrado";
+?>
